@@ -1,0 +1,19 @@
+domain: spam.com
+layout:
+- go.kubebuilder.io/v3
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+projectName: spamapi
+repo: github.com/a7vicky/spamapi
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: spam.com
+  group: cache
+  kind: Spamapi
+  path: github.com/a7vicky/spamapi/api/v1alpha1
+  version: v1alpha1
+version: "3"

@@ -1,0 +1,24 @@
+# permissions for end users to edit spamapis.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: spamapi-editor-role
+rules:
+- apiGroups:
+  - cache.spam.com
+  resources:
+  - spamapis
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - cache.spam.com
+  resources:
+  - spamapis/status
+  verbs:
+  - get
